@@ -1,31 +1,51 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Inteligente</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Painel de Ferramentas</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
     <header class="caixa1">Painel de Ferramentas</header>
-    
-    <main class="conteudo-principal">
-        <aside class="menu-lateral">
-            <nav>
-                <ul>
-                    <li class="desafio"><a href="">Desafio 1</a></li>
-                    <li class="desafio"><a href="">Desafio 2</a></li>
-                    <li class="desafio"><a href="">Desafio 3</a></li>
-                    <li class="desafio"><a href="">Desafio 4</a></li>
-                    <li class="desafio"><a href="">Desafio 5</a></li>
-                    <li class="desafio"><a href="">Desafio 6</a></li>
-                </ul>
-            </nav>
-        </aside>
 
-        <section class="texto-principal"></section>
+    <main class="conteudo-principal">
+      <aside class="menu-lateral">
+        <nav>
+          <ul>
+            <li onclick="trocarTela(1)" class="desafio">
+               desafio 1
+            </li>
+            <li onclick="trocarTela(2)" class="desafio">
+               desafio 2
+            </li>
+            <li onclick="trocarTela(3)" class="desafio">
+               desafio 3
+            </li>
+            <li onclick="trocarTela(4)" class="desafio">
+               desafio 4
+            </li>
+            <li onclick="trocarTela(5)" class="desafio">
+               desafio 5
+            </li>
+            <li onclick="trocarTela(6)" class="desafio">
+               desafio 6
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <section class="texto-principal">
+        <section class="teladesafio telaselecionada">desafio1</section>
+        <section class="teladesafio">desafio2</section>
+        <section class="teladesafio">desafio3</section>
+        <section class="teladesafio">desafio4</section>
+        <section class="teladesafio">desafio5</section>
+        <section class="teladesafio">desafio6</section>
+      </section>
     </main>
 
     <footer class="rodape">Footer</footer>
-</body>
+  </body>
 </html>
