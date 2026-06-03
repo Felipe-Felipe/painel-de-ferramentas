@@ -1,4 +1,3 @@
-
 const teladesafio = document.querySelectorAll(".teladesafio")
 // teladesafio.forEach(tela => {
 //   tela.classList.remove("telaselecionada")
@@ -31,7 +30,7 @@ async function carregarCotacao() {
     }
 }
 
-// USD → BRL
+// USD => BRL
 function usdParaBrl() {
     const valor = parseFloat(document.getElementById("valor").value);
 
@@ -44,7 +43,7 @@ function usdParaBrl() {
     ).innerText = `R$ ${resultado.toFixed(2)}`;
 }
 
-// BRL → USD
+// BRL => USD
 function brlParaUsd() {
     const valor = parseFloat(document.getElementById("valor").value);
 
@@ -58,3 +57,4 @@ function brlParaUsd() {
 }
 
 carregarCotacao();
+
