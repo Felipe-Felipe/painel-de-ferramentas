@@ -72,7 +72,7 @@ function calcularIMC() {
     const resultado = document.getElementById("resultadoimc");
 
     if (peso <= 0 || altura <= 0 || isNaN(peso) || isNaN(altura)) {
-        resultado.innerHTML = "Digite valores válidos!";
+        alert("Por favor, insira valores maiores que zero para calcular o IMC.");
         return;
     }
 
