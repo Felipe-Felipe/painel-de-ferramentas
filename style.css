@@ -104,3 +104,53 @@ button {
 .telaselecionada {
     display: block;
 }
+
+input,
+select,
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+}
+
+#resultadoimc {
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+}
+.containerimc {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: rgba(0, 114, 134, 0.521);
+}
+.containerimc input,
+.containerimc select,
+.containerimc button {
+    width: 50%;
+}
+.containertemperatura {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: rgba(162, 161, 196, 0.521);
+}
+.containertemperatura input,
+.containertemperatura select,
+.containertemperatura button {
+    width: 50%;
+}

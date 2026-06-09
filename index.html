@@ -14,61 +14,87 @@
       <aside class="menu-lateral">
         <nav>
           <ul>
-            <li onclick="trocarTela(1)" class="desafio">
-               Moedas
-            </li>
-            <li onclick="trocarTela(2)" class="desafio">
-               IMC
-            </li>
-            <li onclick="trocarTela(3)" class="desafio">
-               Temperatura
-            </li>
-            <li onclick="trocarTela(4)" class="desafio">
-               Velocidade
-            </li>
-            <li onclick="trocarTela(5)" class="desafio">
-               Massa
-            </li>
-            <li onclick="trocarTela(6)" class="desafio">
-               Regra de 3
-            </li>
+            <li onclick="trocarTela(1)" class="desafio">Moedas</li>
+            <li onclick="trocarTela(2)" class="desafio">IMC</li>
+            <li onclick="trocarTela(3)" class="desafio">Temperatura</li>
+            <li onclick="trocarTela(4)" class="desafio">Velocidade</li>
+            <li onclick="trocarTela(5)" class="desafio">Massa</li>
+            <li onclick="trocarTela(6)" class="desafio">Regra de 3</li>
           </ul>
         </nav>
       </aside>
 
       <section class="texto-principal">
-        <section class="teladesafio moedas telaselecionada">
-            <div class="container">
-              <div class="conversor">
-                <h1>Conversor USD para BRL</h1>
-                <p id="cotacao">Carregando cotação...</p>
-                <input type="number" id="valor" placeholder="Digite um valor">
-                <div class="botoes">
-                    <button onclick="usdParaBrl()">USD => BRL</button>
-                    <button onclick="brlParaUsd()">BRL => USD</button>
-                </div>
-                <h2 id="resultado"></h2>
-                <p id="erro"></p>
+        <section class="teladesafio moedas">
+          <div class="container">
+            <div class="conversor">
+              <h1>Conversor USD para BRL</h1>
+              <p id="cotacao">Carregando cotação...</p>
+              <input type="number" id="valor" placeholder="Digite um valor" />
+              <div class="botoes">
+                <button onclick="usdParaBrl()">USD => BRL</button>
+                <button onclick="brlParaUsd()">BRL => USD</button>
               </div>
+              <h2 id="resultado"></h2>
+              <p id="erro"></p>
+            </div>
           </div>
         </section>
         <section class="teladesafio imc">
-            <div class="container">
-              <h1>IMC</h1>
-            </div>
+          <div class="containerimc">
+            <h1>Calculadora de IMC</h1>
 
+            <input type="number" id="peso" placeholder="Peso (kg)" />
+
+            <input
+              type="number"
+              id="altura"
+              step="0.01"
+              placeholder="Altura (m)"
+            />
+
+            <select id="genero">
+              <option value="homem">Homem</option>
+              <option value="mulher">Mulher</option>
+            </select>
+
+            <button id="btnCalcular">Calcular</button>
+
+            <div id="resultadoimc"></div>
+          </div>
         </section>
-        <section class="teladesafio temperatura">
-            <h1>Temperatura</h1>
+        <section class="teladesafio temperatura telaselecionada">
+          <div class="containertemperatura">
+            <h1>Conversor de Temperatura</h1>
+
+            <input
+              type="number"
+              id="valorTemperatura"
+              placeholder="Digite um valor"
+            />
+
+            <select id="unidadeOrigem">
+              <option value="celsius">Celsius (°C)</option>
+              <option value="fahrenheit">Fahrenheit (°F)</option>
+            </select>
+
+            <select id="unidadeDestino">
+              <option value="fahrenheit">Fahrenheit (°F)</option>
+              <option value="celsius">Celsius (°C)</option>
+            </select>
+
+            <button id="btnConverter">Converter</button>
+
+            <div id="resultadotemperatura"></div>
         </section>
         <section class="teladesafio velocidade">
-            <h1>Velocidade</h1>
+          <h1>Velocidade</h1>
         </section>
         <section class="teladesafio massa">
-            <h1>Massa</h1>
+          <h1>Massa</h1>
         </section>
         <section class="teladesafio regra">
-            <h1>Regra de 3</h1>
+          <h1>Regra de 3</h1>
         </section>
       </section>
     </main>
