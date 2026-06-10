@@ -154,18 +154,13 @@ button {
     width: 50%;
 }
 
-.teladesafio .velocidade {
+.containervelocidade {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 30px;
-    background-color: rgb(148, 147, 170);
-}
-
-.containervelocidade {
     width: 100%;
     margin: auto;
-    padding: 10px;
     height: 100%;
     background-color: rgb(148, 147, 170);
     display: flex;
@@ -186,7 +181,7 @@ button {
 
 .containervelocidade input,
 .containervelocidade select {
-    width: 100%;
+    width: 50%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 6px;
@@ -200,7 +195,7 @@ button {
 }
 
 #btnConverterVelocidade {
-    width: 100%;
+    width: 50%;
     padding: 12px;
     background: #007bff;
     color: white;
@@ -215,12 +210,8 @@ button {
 }
 
 #resultadovelocidade {
-    min-height: 25px;
-    padding: 10px;
     text-align: center;
     font-weight: bold;
-    color: #007bff;
-    background: #f0f8ff;
     border-radius: 6px;
 }
 
