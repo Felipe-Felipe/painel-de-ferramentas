@@ -155,3 +155,72 @@ button {
 .containertemperatura button {
     width: 50%;
 }
+
+.teladesafio.velocidade {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background-color: rgb(148, 147, 170);
+}
+
+.containervelocidade {
+    width: 100%;
+    max-width: 350px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.containervelocidade h1 {
+    text-align: center;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.containervelocidade label {
+    font-weight: bold;
+    color: #444;
+}
+
+.containervelocidade input,
+.containervelocidade select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.containervelocidade input:focus,
+.containervelocidade select:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+#btnConverterVelocidade {
+    width: 100%;
+    padding: 12px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#btnConverterVelocidade:hover {
+    background: #0056b3;
+}
+
+#resultadovelocidade {
+    min-height: 25px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: #007bff;
+    background: #f0f8ff;
+    border-radius: 6px;
+}

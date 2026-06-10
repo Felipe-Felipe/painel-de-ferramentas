@@ -53,6 +53,7 @@
               placeholder="Altura (m)"
             />
 
+            <label for="genero"></label>
             <select id="genero">
               <option value="homem">Homem</option>
               <option value="mulher">Mulher</option>
@@ -63,33 +64,61 @@
             <div id="resultadoimc"></div>
           </div>
         </section>
-        <section class="teladesafio temperatura telaselecionada">
+        <section class="teladesafio temperatura">
           <div class="containertemperatura">
             <h1>Conversor de Temperatura</h1>
-
             <input
               type="number"
               id="valorTemperatura"
               placeholder="Digite um valor"
             />
 
-            <select id="unidadeOrigem">
+            <label for="unidadeOrigem"></label>
+            <select id="unidadeOrigem" aria-label="Unidade de origem">
               <option value="celsius">Celsius (°C)</option>
               <option value="fahrenheit">Fahrenheit (°F)</option>
             </select>
 
-            <select id="unidadeDestino">
+            <label for="unidadeDestino"></label>
+            <select id="unidadeDestino" aria-label="Unidade de destino">
               <option value="fahrenheit">Fahrenheit (°F)</option>
               <option value="celsius">Celsius (°C)</option>
             </select>
 
             <button id="btnConverter">Converter</button>
+            
 
             <div id="resultadotemperatura"></div>
         </section>
-        <section class="teladesafio velocidade">
-          <h1>Velocidade</h1>
-        </section>
+       <section class="teladesafio velocidade telaselecionada">
+    <div class="containervelocidade">
+        <h1>Conversor de Velocidade</h1>
+
+        <input
+            type="number"
+            id="valorVelocidade"
+            placeholder="Digite um valor"
+        />
+
+        <label for="unidadeVelocidade"></label>
+        <select id="unidadeVelocidade">
+            <option value="kmh">Km/h</option>
+            <option value="mph">mph</option>
+        </select>
+
+        <label for="unidadeVelocidadeDestino"></label>
+        <select id="unidadeVelocidadeDestino">
+            <option value="mph">mph</option>
+            <option value="kmh">Km/h</option>
+        </select>
+
+        <button id="btnConverterVelocidade">
+            Converter
+        </button>
+
+        <div id="resultadovelocidade"></div>
+    </div>
+</section>
         <section class="teladesafio massa">
           <h1>Massa</h1>
         </section>

@@ -119,7 +119,7 @@ function calcularTemperatura() {
     const valor = parseFloat(document.getElementById("valorTemperatura").value);
     const resultado = document.getElementById("resultadotemperatura");    
     if (isNaN(valor)) {
-        resultado.innerText = "Digite um valor numérico!";
+        alert("Por favor, insira um valor maior que zero.");
         return;
     }
     let valorConvertido;
@@ -133,3 +133,50 @@ function calcularTemperatura() {
     resultado.innerText = `Valor convertido: ${valorConvertido.toFixed(2)} ${unidadeDestino}`;
 }
 
+const btn_calcularvelocidade = document.getElementById(
+    "btnConverterVelocidade"
+);
+
+btn_calcularvelocidade.addEventListener(
+    "click",
+    calcularVelocidade
+);
+
+function calcularVelocidade() {
+    const unidadeOrigem =
+        document.getElementById("unidadeVelocidade").value;
+
+    const unidadeDestino =
+        document.getElementById("unidadeVelocidadeDestino").value;
+
+    const valor = parseFloat(
+        document.getElementById("valorVelocidade").value
+    );
+
+    const resultado =
+        document.getElementById("resultadovelocidade");
+
+    if (isNaN(valor) || valor <= 0) {
+        alert("Por favor, insira um valor maior que zero.");
+        return;
+    }
+
+    let valorConvertido;
+
+    if (unidadeOrigem === unidadeDestino) {
+        valorConvertido = valor;
+    } else if (
+        unidadeOrigem === "kmh" &&
+        unidadeDestino === "mph"
+    ) {
+        valorConvertido = valor * 0.621371;
+    } else if (
+        unidadeOrigem === "mph" &&
+        unidadeDestino === "kmh"
+    ) {
+        valorConvertido = valor / 0.621371;
+    }
+
+    resultado.innerText =
+        `Valor convertido: ${valorConvertido.toFixed(2)} ${unidadeDestino}`;
+}
