@@ -102,9 +102,7 @@ button {
 #erro {
     color: red;
 }
-.telaselecionada {
-    display: block;
-}
+
 
 input,
 select,
@@ -156,7 +154,7 @@ button {
     width: 50%;
 }
 
-.teladesafio.velocidade {
+.teladesafio .velocidade {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -166,8 +164,10 @@ button {
 
 .containervelocidade {
     width: 100%;
-    max-width: 350px;
-
+    margin: auto;
+    padding: 10px;
+    height: 100%;
+    background-color: rgb(148, 147, 170);
     display: flex;
     flex-direction: column;
     gap: 7px;
@@ -208,7 +208,6 @@ button {
     border-radius: 6px;
     font-size: 16px;
     cursor: pointer;
-    transition: 0.3s;
 }
 
 #btnConverterVelocidade:hover {
@@ -223,4 +222,8 @@ button {
     color: #007bff;
     background: #f0f8ff;
     border-radius: 6px;
+}
+
+.telaselecionada {
+    display: block;
 }
