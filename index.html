@@ -23,7 +23,7 @@
           </ul>
         </nav>
       </aside>
-
+        
       <section class="texto-principal">
         <section class="teladesafio moedas">
           <div class="container">
@@ -53,8 +53,8 @@
               placeholder="Altura (m)"
             />
 
-            <label for="genero"></label>
-            <select id="genero">
+            <label for="genero">Gênero</label>
+            <select id="genero" aria-label="Gênero">
               <option value="homem">Homem</option>
               <option value="mulher">Mulher</option>
             </select>
@@ -73,13 +73,11 @@
               placeholder="Digite um valor"
             />
 
-            <label for="unidadeOrigem"></label>
             <select id="unidadeOrigem" aria-label="Unidade de origem">
               <option value="celsius">Celsius (°C)</option>
               <option value="fahrenheit">Fahrenheit (°F)</option>
             </select>
 
-            <label for="unidadeDestino"></label>
             <select id="unidadeDestino" aria-label="Unidade de destino">
               <option value="fahrenheit">Fahrenheit (°F)</option>
               <option value="celsius">Celsius (°C)</option>
@@ -90,7 +88,7 @@
 
             <div id="resultadotemperatura"></div>
         </section>
-       <section class="teladesafio velocidade telaselecionada">
+       <section class="teladesafio velocidade">
     <div class="containervelocidade">
         <h1>Conversor de Velocidade</h1>
 
@@ -100,14 +98,14 @@
             placeholder="Digite um valor"
         />
 
-        <label for="unidadeVelocidade"></label>
-        <select id="unidadeVelocidade">
+        <label for="unidadeVelocidade">Valor primário</label>
+        <select id="unidadeVelocidade" aria-label="Unidade de origem">
             <option value="kmh">Km/h</option>
             <option value="mph">mph</option>
         </select>
 
-        <label for="unidadeVelocidadeDestino"></label>
-        <select id="unidadeVelocidadeDestino">
+        <label for="unidadeVelocidadeDestino">Valor a ser convertido</label>
+        <select id="unidadeVelocidadeDestino" aria-label="Unidade de destino">
             <option value="mph">mph</option>
             <option value="kmh">Km/h</option>
         </select>
@@ -129,12 +127,14 @@
             placeholder="Digite um valor"
         />
 
-        <select id="unidadeMassa">
+        <label for="unidadeMassa">Valor primário</label>
+        <select id="unidadeMassa" aria-label="Unidade de origem">
             <option value="kg">Quilogramas (kg)</option>
             <option value="lb">Libras (lb)</option>
         </select>
 
-        <select id="unidadeMassaDestino">
+        <label for="unidadeMassaDestino">Valor a ser convertido</label>
+        <select id="unidadeMassaDestino" aria-label="Unidade de destino">
             <option value="lb">Libras (lb)</option>
             <option value="kg">Quilogramas (kg)</option>
         </select>
@@ -146,12 +146,32 @@
         <div id="resultadomassa"></div>
     </div>
 </section>
-        <section class="teladesafio regra">
+        <section class="teladesafio regra telaselecionada">
+          <div class="containerregra">
           <h1>Regra de 3</h1>
+
+          <p>A está para B, assim como C está para X</p>
+          <div class="proporcao">
+            <input type="number" id="ValorA" placeholder="valorA">
+            <span>:</span>
+
+            <input type="number" id="ValorB" placeholder="valorB">
+            <span>: :</span>
+
+            <input type="number" id="ValorC" placeholder="valorC">
+            <span>:</span>
+
+            <input type="text" id="valorX" placeholder="Resultado de X" readonly>
+          </div>
+
+          <button id="btnRegra3">Calcular</button>
+          
+          <div id="resultadoRegra"></div>
+          </div>
         </section>
       </section>
     </main>
 
-    <footer class="rodape">Footer</footer>
+    <footer class="rodape">the website was developed by Felipe Maranhão</footer>
   </body>
 </html>
