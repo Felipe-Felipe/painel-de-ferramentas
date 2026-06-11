@@ -180,3 +180,47 @@ function calcularVelocidade() {
     resultado.innerText =
         `Valor convertido: ${valorConvertido.toFixed(2)} ${unidadeDestino}`;
 }
+const btn_calcularmassa = document.getElementById("btnConverterMassa");
+
+if (btn_calcularmassa) {
+    btn_calcularmassa.addEventListener("click", calcularMassa);
+}
+
+function calcularMassa() {
+    const unidadeOrigem =
+        document.getElementById("unidadeMassa").value;
+
+    const unidadeDestino =
+        document.getElementById("unidadeMassaDestino").value;
+
+    const valor = parseFloat(
+        document.getElementById("valorMassa").value
+    );
+
+    const resultado =
+        document.getElementById("resultadomassa");
+
+    if (isNaN(valor) || valor <= 0) {
+        alert("Por favor, insira um valor maior que zero.");
+        return;
+    }
+
+    let valorConvertido;
+
+    if (unidadeOrigem === unidadeDestino) {
+        valorConvertido = valor;
+    } else if (
+        unidadeOrigem === "kg" &&
+        unidadeDestino === "lb"
+    ) {
+        valorConvertido = valor * 2.20462;
+    } else if (
+        unidadeOrigem === "lb" &&
+        unidadeDestino === "kg"
+    ) {
+        valorConvertido = valor / 2.20462;
+    }
+
+    resultado.innerText =
+        `Valor convertido: ${valorConvertido.toFixed(2)} ${unidadeDestino}`;
+}

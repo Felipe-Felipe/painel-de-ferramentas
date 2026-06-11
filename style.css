@@ -214,6 +214,60 @@ button {
     font-weight: bold;
     border-radius: 6px;
 }
+.containermassa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    width: 100%;
+    margin: auto;
+    height: 100%;
+    background-color: rgba(177, 171, 171, 0.648);
+    flex-direction: column;
+    gap: 7px;
+}
+
+.containermassa h1 {
+    text-align: center;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.containermassa input,
+.containermassa select {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.containermassa input:focus,
+.containermassa select:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+#btnConverterMassa {
+    width: 50%;
+    padding: 12px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#btnConverterMassa:hover {
+    background: #0056b3;
+}
+
+#resultadomassa {
+    text-align: center;
+    font-weight: bold;
+    border-radius: 6px;
+}
 
 .telaselecionada {
     display: block;
