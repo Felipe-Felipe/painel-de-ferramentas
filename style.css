@@ -269,6 +269,53 @@ button {
     border-radius: 6px;
 }
 
+.containerregra {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    background: rgb(145, 240, 192);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.proporcao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.proporcao input {
+    width: 20%;
+    text-align: center;
+}
+
+.proporcao span {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#valorX {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+#resultadoRegra {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+#btnRegra3{
+    width: 40%;
+}
+
 .telaselecionada {
     display: block;
 }

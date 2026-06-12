@@ -25,7 +25,7 @@
       </aside>
         
       <section class="texto-principal">
-        <section class="teladesafio moedas">
+        <section class="teladesafio moedas telaselecionada">
           <div class="container">
             <div class="conversor">
               <h1>Conversor USD para BRL</h1>
@@ -146,28 +146,29 @@
         <div id="resultadomassa"></div>
     </div>
 </section>
-        <section class="teladesafio regra telaselecionada">
+        <section class="teladesafio regra">
           <div class="containerregra">
-          <h1>Regra de 3</h1>
+    <h1>Regra de 3</h1>
 
-          <p>A está para B, assim como C está para X</p>
-          <div class="proporcao">
-            <input type="number" id="ValorA" placeholder="valorA">
-            <span>:</span>
+    <p>A está para B, assim como C está para X</p>
 
-            <input type="number" id="ValorB" placeholder="valorB">
-            <span>: :</span>
+    <div class="proporcao">
+        <input type="number" id="valorA" placeholder="Valor A">
+        <span>:</span>
 
-            <input type="number" id="ValorC" placeholder="valorC">
-            <span>:</span>
+        <input type="number" id="valorB" placeholder="Valor B">
+        <span>::</span>
 
-            <input type="text" id="valorX" placeholder="Resultado de X" readonly>
-          </div>
+        <input type="number" id="valorC" placeholder="Valor C">
+        <span>:</span>
 
-          <button id="btnRegra3">Calcular</button>
-          
-          <div id="resultadoRegra"></div>
-          </div>
+        <input type="text" id="valorX" placeholder="Resultado X" readonly>
+    </div>
+
+    <button id="btnRegra3">Calcular</button>
+
+    <div id="resultadoRegra"></div>
+</div> 
         </section>
       </section>
     </main>

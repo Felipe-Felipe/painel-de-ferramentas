@@ -81,30 +81,38 @@ function calcularIMC() {
 
         if (imc < 18.5) {
             classificacao = "Abaixo do peso";
-        } else if (imc <= 24.9) {
+        } 
+        else if (imc <= 24.9) {
             classificacao = "Normal";
-        } else if (imc <= 29.9) {
+        } 
+        else if (imc <= 29.9) {
             classificacao = "Sobrepeso";
-        } else {
+        } 
+        else {
             classificacao = "Obesidade";
         }
 
-    } else {
+    } 
+    else if (genero === "mulher") {
 
         if (imc < 18.5) {
             classificacao = "Abaixo do peso";
-        } else if (imc <= 23.9) {
+        } 
+        else if (imc <= 23.9) {
             classificacao = "Normal";
-        } else if (imc <= 28.9) {
+        } 
+        else if (imc <= 28.9) {
             classificacao = "Sobrepeso";
-        } else {
+        } 
+        else {
             classificacao = "Obesidade";
         }
-
     }
 
-    resultado.innerHTML =
-        `IMC: ${imc.toFixed(2)}<br>Classificação: ${classificacao}`;
+    resultado.innerHTML = `
+        IMC: ${imc.toFixed(2)}<br>
+        Classificação: ${classificacao}
+    `;
 }
 
 const btn_calculartemperatura = document.getElementById("btnConverter");  
@@ -177,6 +185,7 @@ function calcularVelocidade() {
     resultado.innerText =
         `Valor convertido: ${valorConvertido.toFixed(2)} ${unidadeDestino}`;
 }
+
 const btn_calcularmassa = document.getElementById("btnConverterMassa");
 
 if (btn_calcularmassa) {
@@ -220,4 +229,46 @@ function calcularMassa() {
 
     resultado.innerText =
         `Valor convertido: ${valorConvertido.toFixed(2)} ${unidadeDestino}`;
+}
+
+const btnRegra3 = document.getElementById("btnRegra3");
+
+if (btnRegra3) {
+    btnRegra3.addEventListener("click", calcularRegra3);
+}
+
+function calcularRegra3() {
+
+    const a = Number(document.getElementById("valorA").value);
+    const b = Number(document.getElementById("valorB").value);
+    const c = Number(document.getElementById("valorC").value);
+
+    const campoX = document.getElementById("valorX");
+    const resultado = document.getElementById("resultadoRegra");
+
+    if (a <= 0 || isNaN(a)) {
+        resultado.style.color = "red";
+        resultado.innerHTML =
+            alert("O valor de A não pode ser 0");
+
+        campoX.value = "";
+        return;
+    }
+
+    if (b <= 0 || c <= 0 || isNaN(b) || isNaN(c)) {
+        resultado.style.color = "red";
+        resultado.innerHTML =
+           alert("O valor não pode ser 0, para poder fazer a converção")
+
+        campoX.value = "";
+        return;
+    }
+
+    const x = (b * c) / a;
+
+    campoX.value = x.toFixed(2);
+
+    resultado.style.color = "black";
+    resultado.innerHTML =
+        `Resultado calculado: X = ${x.toFixed(2)}`;
 }
