@@ -1,4 +1,8 @@
 const teladesafio = document.querySelectorAll(".teladesafio")
+const btn_dark = document.querySelector(".btn_dark")
+const elements_dark = document.querySelectorAll(".dark")
+
+
 function trocarTela(tela){
     teladesafio.forEach(tela => {
       tela.classList.remove("telaselecionada")
@@ -272,3 +276,9 @@ function calcularRegra3() {
     resultado.innerHTML =
         `Resultado calculado: X = ${x.toFixed(2)}`;
 }
+
+btn_dark.addEventListener("click", () => {
+    elements_dark.forEach(element => {
+        element.classList.toggle("md-dark");
+    });
+})
